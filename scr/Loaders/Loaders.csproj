@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Costura.Fody.6.0.0\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.6.0.0\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{380087F0-180E-4F8F-B7EC-20DFC4DB262B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Aourus</RootNamespace>
+    <AssemblyName>Aorus Laucher</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>photo_2025-03-24_02-06-18__1_-removebg-preview.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Costura, Version=6.0.0.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Costura.Fody.6.0.0\lib\netstandard2.0\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net461\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AourusLaucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AourusLaucher.Designer.cs">
+      <DependentUpon>AourusLaucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ColumnManager.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Стартеры Клиентов\Haruka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Haruka.Designer.cs">
+      <DependentUpon>Haruka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\NixProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\NixProject.Designer.cs">
+      <DependentUpon>NixProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\NewCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\NewCode.Designer.cs">
+      <DependentUpon>NewCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Zovchik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Zovchik.Designer.cs">
+      <DependentUpon>Zovchik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Valiant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Valiant.Designer.cs">
+      <DependentUpon>Valiant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Zaharov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Zaharov.Designer.cs">
+      <DependentUpon>Zaharov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\wexside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\wexside.Designer.cs">
+      <DependentUpon>wexside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\NightProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\NightProject.Designer.cs">
+      <DependentUpon>NightProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Laze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Laze.Designer.cs">
+      <DependentUpon>Laze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Celestial 1.12.2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Celestial 1.12.2.Designer.cs">
+      <DependentUpon>Celestial 1.12.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Celestial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Celestial.Designer.cs">
+      <DependentUpon>Celestial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\KoshkaClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\KoshkaClient.Designer.cs">
+      <DependentUpon>KoshkaClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Excellent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Excellent.Designer.cs">
+      <DependentUpon>Excellent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Catlavan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Catlavan.Designer.cs">
+      <DependentUpon>Catlavan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Wild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Wild.Designer.cs">
+      <DependentUpon>Wild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\VenusWare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\VenusWare.Designer.cs">
+      <DependentUpon>VenusWare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Nursultan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Nursultan.Designer.cs">
+      <DependentUpon>Nursultan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Expensive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Стартеры Клиентов\Expensive.Designer.cs">
+      <DependentUpon>Expensive.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AourusLaucher.resx">
+      <DependentUpon>AourusLaucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\Haruka.resx">
+      <DependentUpon>Haruka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\NixProject.resx">
+      <DependentUpon>NixProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\NewCode.resx">
+      <DependentUpon>NewCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\Zovchik.resx">
+      <DependentUpon>Zovchik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\Valiant.resx">
+      <DependentUpon>Valiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\Zaharov.resx">
+      <DependentUpon>Zaharov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\wexside.resx">
+      <DependentUpon>wexside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\NightProject.resx">
+      <DependentUpon>NightProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\Laze.resx">
+      <DependentUpon>Laze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\Celestial 1.12.2.resx">
+      <DependentUpon>Celestial 1.12.2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\Celestial.resx">
+      <DependentUpon>Celestial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\KoshkaClient.resx">
+      <DependentUpon>KoshkaClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\Excellent.resx">
+      <DependentUpon>Excellent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\Catlavan.resx">
+      <DependentUpon>Catlavan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\Wild.resx">
+      <DependentUpon>Wild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\VenusWare.resx">
+      <DependentUpon>VenusWare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\Nursultan.resx">
+      <DependentUpon>Nursultan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Стартеры Клиентов\Expensive.resx">
+      <DependentUpon>Expensive.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="photo_2025-03-24_02-06-18__1_-removebg-preview.ico" />
+    <None Include="Resources\Laze.png" />
+    <None Include="Resources\Zovchik.jpg" />
+    <None Include="Resources\Arcana Loader.exe" />
+    <None Include="Resources\Catlavan.png" />
+    <None Include="Resources\celka.jpg" />
+    <None Include="Resources\estynett.png" />
+    <None Include="Resources\excellent.png" />
+    <None Include="Resources\expensive.png" />
+    <None Include="Resources\fluger.png" />
+    <None Include="Resources\koshkaclient.png" />
+    <None Include="Resources\minced.png" />
+    <None Include="Resources\Naruka.jpeg" />
+    <None Include="Resources\newcode.png" />
+    <None Include="Resources\NightProject.png" />
+    <None Include="Resources\NixPrj.jpeg" />
+    <None Include="Resources\nurs.png" />
+    <None Include="Resources\OrbitaClient.png" />
+    <None Include="Resources\Valiant.png" />
+    <None Include="Resources\venusware.png" />
+    <None Include="Resources\wex.jpg" />
+    <None Include="Resources\wild.png" />
+    <None Include="Resources\wissend.png" />
+    <None Include="Resources\Zaharov.jpg" />
+    <None Include="Resources\akrien.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.6.8.2\build\Fody.targets" Condition="Exists('..\packages\Fody.6.8.2\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.6.8.2\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.6.8.2\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.6.0.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.6.0.0\build\Costura.Fody.props'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.6.0.0\build\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.6.0.0\build\Costura.Fody.targets'))" />
+  </Target>
+  <Import Project="..\packages\Costura.Fody.6.0.0\build\Costura.Fody.targets" Condition="Exists('..\packages\Costura.Fody.6.0.0\build\Costura.Fody.targets')" />
+</Project>
