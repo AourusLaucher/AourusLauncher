@@ -1,6 +1,6 @@
 <p align=center><img src="https://raw.githubusercontent.com/AourusLaucher/AourusLauncher/refs/heads/main/screen/logo.jpg" width=100></p>
 
-<h1 align=center>CollapseLoader</h1>
+<h1 align=center>AourusLauncher</h1>
 
 <h2 align=center>WindowsForm utility to run minecraft clients</h2> 
 
