@@ -2,7 +2,7 @@
 
 <h1 align=center>CollapseLoader</h1>
 
-<h2 align=center>CLI-based utility to run minecraft clients</h2> 
+<h2 align=center>WindowsForm utility to run minecraft clients</h2> 
 
 <h3 align=center>You can also download the latest version on our <a href="https://t.me/AourusLaucher">website</a></h3>
 
